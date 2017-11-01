@@ -5,6 +5,7 @@ import "/imports/ui/components/documents/index/documents-index.js"
 import "/imports/ui/components/documents/new/document-new.js"
 import "/imports/ui/components/documents/show/document-show.js"
 import "/imports/ui/components/documents/edit/document-edit.js"
+import "/imports/ui/components/documents/notifications/document-notifications.js"
 
 // ***************************************************************
 // Document routes
@@ -21,6 +22,19 @@ FlowRouter.route("/documents", {
     })
   },
   name: "documentsIndex"
+})
+
+// DOCUMENT NOTIFICATIONS
+// -------------------------------------------------------
+FlowRouter.route("/documents/notifications", {
+  action: function() {
+    BlazeLayout.render("layout", {
+      header: "header",
+      main: "documentNotifications",
+      footer: "footer"
+    })
+  },
+  name: "documentNotifications"
 })
 
 // DOCUMENT NEW
